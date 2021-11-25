@@ -27,7 +27,20 @@ console.log(targetCurrency);
 // Step 2: Validate user input
 // --------------------------------------------------
 // Next we will ensure that the user has provided all of the require information.
+if (amount === undefined) {
+  console.log("please enter your amount");
+  process.exit();
+}
 
+if (initialCurrency === undefined) {
+  console.log("please enter your initial currency");
+  process.exit();
+}
+
+if (targetCurrency === undefined) {
+  console.log("please enter your target currency");
+  process.exit();
+}
 // If any of the required information is missing, display a meaningful message
 // and exit the program.
 
