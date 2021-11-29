@@ -58,6 +58,15 @@ if (targetCurrency === undefined) {
 let USD = 1;
 let CAD = 1.25;
 const supportedCurrencies = ["USD", "CAD"];
+
+// --------------------------------------------------
+// Step 4: Ensure that a conversion rate exists
+// --------------------------------------------------
+// Since it is possible for the user to supply invalid or unsupported currencies,
+// we must check for the presence of a rate before attempting to convert.
+
+// If the user supplies an invalid initial or target currency, display a meaningful
+// warning message and exit the program.
 if (supportedCurrencies.includes(initialCurrency) === false) {
   console.log(
     "initial Currency is not supported. The supported currencies are:",
@@ -70,15 +79,6 @@ if (supportedCurrencies.includes(targetCurrency) === false) {
     supportedCurrencies
   );
 }
-// --------------------------------------------------
-// Step 4: Ensure that a conversion rate exists
-// --------------------------------------------------
-// Since it is possible for the user to supply invalid or unsupported currencies,
-// we must check for the presence of a rate before attempting to convert.
-
-// If the user supplies an invalid initial or target currency, display a meaningful
-// warning message and exit the program.
-
 // --------------------------------------------------
 // Step 5: Perform conversion
 // --------------------------------------------------
