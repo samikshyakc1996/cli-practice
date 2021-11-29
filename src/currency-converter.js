@@ -86,7 +86,19 @@ if (supportedCurrencies.includes(targetCurrency) === false) {
 // information, and that a rate exists for each of the currencies.
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
+if (
+  supportedCurrencies.includes(initialCurrency) === true &&
+  supportedCurrencies.includes(targetCurrency) === true
+) {
+  let converted_amt;
+  if (initialCurrency === "USD" && targetCurrency === "CAD") {
+    converted_amt = amount * CAD;
+  }
 
+  if (initialCurrency === "CAD" && targetCurrency === "USD") {
+    converted_amt = amount / CAD;
+  }
+}
 // --------------------------------------------------
 // Step 6: Display results
 // --------------------------------------------------
