@@ -28,17 +28,17 @@ console.log(targetCurrency);
 // --------------------------------------------------
 // Next we will ensure that the user has provided all of the require information.
 if (amount === undefined) {
-  console.log("please enter your amount");
+  console.log("Please enter your amount");
   process.exit();
 }
 
 if (initialCurrency === undefined) {
-  console.log("please enter your initial currency");
+  console.log("Please enter your initial currency");
   process.exit();
 }
 
 if (targetCurrency === undefined) {
-  console.log("please enter your target currency");
+  console.log("Please enter your target currency");
   process.exit();
 }
 // If any of the required information is missing, display a meaningful message
@@ -55,7 +55,21 @@ if (targetCurrency === undefined) {
 
 // The conversion rates do not have to be accurate, athough this resource contains
 // up-to-date rate information: https://www.xe.com/
-
+let USD = 1;
+let CAD = 1.25;
+const supportedCurrencies = ["USD", "CAD"];
+if (supportedCurrencies.includes(initialCurrency) === false) {
+  console.log(
+    "initial Currency is not supported. The supported currencies are:",
+    supportedCurrencies
+  );
+}
+if (supportedCurrencies.includes(targetCurrency) === false) {
+  console.log(
+    "Target Currency is not supported. The supported currencies are:",
+    supportedCurrencies
+  );
+}
 // --------------------------------------------------
 // Step 4: Ensure that a conversion rate exists
 // --------------------------------------------------
