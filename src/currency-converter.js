@@ -19,9 +19,6 @@ console.log(process.argv);
 const amount = process.argv[2];
 const initialCurrency = process.argv[3];
 const targetCurrency = process.argv[4];
-console.log(amount);
-console.log(initialCurrency);
-console.log(targetCurrency);
 
 // --------------------------------------------------
 // Step 2: Validate user input
@@ -98,11 +95,20 @@ if (
   if (initialCurrency === "CAD" && targetCurrency === "USD") {
     converted_amt = amount / CAD;
   }
-}
-// --------------------------------------------------
-// Step 6: Display results
-// --------------------------------------------------
-// Finally we will display the result as part of a meaningful message.
 
-// This message should also include the original amount and currency information
-// supplied by the user.
+  // --------------------------------------------------
+  // Step 6: Display results
+  // --------------------------------------------------
+  // Finally we will display the result as part of a meaningful message.
+
+  // This message should also include the original amount and currency information
+  // supplied by the user.
+  console.log(
+    "The converted rate  for",
+    amount,
+    initialCurrency,
+    "is: ",
+    converted_amt,
+    targetCurrency
+  );
+}

@@ -11,13 +11,13 @@
 // same file for illustrative and learning purposes.
 
 function myCoolFunction() {
-  return 'Wow, what a cool function';
+  return "Wow, what a cool function";
 }
 
-describe('myCoolFunction()', () => {
-  test('should return the message: "Wow, what a cool function"', () => {
+describe("myCoolFunction()", () => {
+  test('should return the message: "Wow, what a cool function!!!"', () => {
     const result = myCoolFunction();
 
-    expect(result).toBe('Wow, what a cool function');
+    expect(result).toBe("Wow, what a cool function");
   });
 });
