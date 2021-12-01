@@ -25,12 +25,7 @@ const targetCurrency = process.argv[4];
 // --------------------------------------------------
 // Next we will ensure that the user has provided all of the require information.
 if (amount === undefined) {
-  console.log(amount === NaN);
   console.log("Please enter your amount");
-  process.exit();
-}
-if (typeof amount != "number") {
-  console.log("Please enter an amount to be converted");
   process.exit();
 }
 
@@ -89,7 +84,6 @@ if (supportedCurrencies.includes(targetCurrency) === false) {
 
 // Now we will compute the rate, apply it to the amount, and capture the result.
 if (
-  typeof amount === "number" &&
   supportedCurrencies.includes(initialCurrency) === true &&
   supportedCurrencies.includes(targetCurrency) === true
 ) {
